@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:gravity="center"
+    tools:context=".finalPage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONGRATULATIONS!!"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/text_size_m"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="workout complete"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/text_size_m"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:onClick="restart"
+        android:id="@+id/back_to_home"
+        android:background="@color/appthemegreen"
+        android:layout_marginTop="@dimen/margin_s"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        android:textStyle="bold"/>
+
+
+
+
+</LinearLayout>

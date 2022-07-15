@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".exercisepage">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_height="@dimen/dimension_xs"
+        android:background="#f4903b"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rest_ll"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GET READY!!"
+            android:textColor="@color/orange"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+
+            <FrameLayout
+
+                android:layout_marginTop="@dimen/margin_xs" android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bglayout">
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:layout_width="200dp"
+                    android:id="@+id/rest_progressbar"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:rotation="-90"
+                    android:background="@drawable/progressbar_grey_bg"
+                    android:progressDrawable="@drawable/progressbar_orange_progress_bg"
+                    android:max="10"
+                    android:min="0"
+                    android:indeterminate="false"
+                    android:progress="10">
+                </androidx.core.widget.ContentLoadingProgressBar>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/timer_filled_orange_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rest_timer_time"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textSize="@dimen/text_size_xl"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+       android:id="@+id/exercise_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@id/toolbar">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/exercise_image"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            tools:text="Exercise Name"
+            android:textSize="@dimen/text_size_m"
+            android:textColor="@color/orange"
+            android:id="@+id/exercise_name"/>
+
+
+
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bglayout">
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:layout_width="200dp"
+                android:id="@+id/exercise_progressbar"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:rotation="-90"
+                android:background="@drawable/progressbar_grey_bg"
+                android:progressDrawable="@drawable/progressbar_orange_progress_bg"
+                android:max="30"
+                android:min="0"
+                android:indeterminate="false"
+                android:progress="30">
+            </androidx.core.widget.ContentLoadingProgressBar>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/timer_filled_orange_bg">
+
+                <TextView
+                    android:id="@+id/exercise_timer_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textSize="@dimen/text_size_xl"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
